@@ -17,16 +17,20 @@ class CreateUsersSeeder extends Seeder
     {
         $users = [
             [
-               'name'=>'Admin User',
-               'email'=>'admin@scuti.id',
-               'type'=>1,
+                'name' => 'Admin User',
+                'email' => 'admin@example.com',
+               'type'=>0,
                'password'=> bcrypt('admin123456'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
             [
-               'name'=>'Demo Scuti',
-               'email'=>'demo@scuti.id',
-               'type'=>0,
-               'password'=> bcrypt('demo123456'),
+                'name' => 'Superadmin User',
+                'email' => 'superadmin@example.com',
+               'type'=>1,
+               'password'=> bcrypt('superadmin123456'),
+                'created_at' => now(),
+                'updated_at' => now(),
             ],
         ];
     
